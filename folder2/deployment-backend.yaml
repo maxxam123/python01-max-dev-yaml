@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python01-back
+  labels:
+    app: python01-back
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python01-back
+  template:
+    metadata:
+      labels:
+        app: python01-back
+    spec:
+      containers:
+      - name: python01-back
+        image: hennighausen/python01-max-dev-backend:v1
+        ports:
+        - containerPort: 4000

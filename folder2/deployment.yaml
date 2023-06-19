@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python01-front
+  labels:
+    app: python01-front
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python01-front
+  template:
+    metadata:
+      labels:
+        app: python01-front
+    spec:
+      containers:
+      - name: python01-front
+        image: hennighausen/python01-max-dev-frontend:v1
+        ports:
+        - containerPort: 3000

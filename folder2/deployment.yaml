@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: python01-front
-        image: hennighausen/python01-max-dev-frontend:v4 
+        image: hennighausen/python01-max-dev-frontend:v5 
         ports:
         - containerPort: 3000

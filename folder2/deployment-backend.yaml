@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: python01-back
-        image: hennighausen/python01-max-dev-backend:v3 
+        image: hennighausen/python01-max-dev-backend:v4 
         ports:
         - containerPort: 4000
